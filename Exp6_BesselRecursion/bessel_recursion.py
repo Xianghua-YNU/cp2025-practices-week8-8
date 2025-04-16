@@ -27,16 +27,16 @@ def bessel_up(x, lmax):
     return j
 
 def bessel_down(x, lmax, m_start=None):
-    """向下递推计算球贝塞尔函数
+    #向下递推计算球贝塞尔函数
     
-    Args:
+    #Args:
         x: float, 自变量
         lmax: int, 最大阶数
         m_start: int, 起始阶数，默认为lmax + 15
         
-    Returns:
+    #Returns:
         numpy.ndarray, 从0到lmax阶的球贝塞尔函数值
-    """
+    
     if m_start is None:
         m_start = lmax + 15
     
@@ -61,12 +61,12 @@ def bessel_down(x, lmax, m_start=None):
     return j
 
 def plot_comparison(x, lmax):
-    """绘制不同方法计算结果的比较图
+    #绘制不同方法计算结果的比较图
     
-    Args:
+    #Args:
         x: float, 自变量
         lmax: int, 最大阶数
-    """
+    
     l = np.arange(lmax + 1)
     
     # 计算三种方法的结果
