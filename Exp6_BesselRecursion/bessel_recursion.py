@@ -45,7 +45,7 @@ def bessel_down(x, lmax, m_start=None):
         j_temp[l-1] = (2*l + 1) / x * j_temp[l] - j_temp[l+1]
     
     # 计算解析的j_0(x)用于归一化
-    j0_analytic = np.sin(x) / x if x != 0 else 1.0
+        j0_analytic = np.sin(x) / x if x != 0 else 1.0
     
     # 归一化
     scale = j0_analytic / j_temp[0]
