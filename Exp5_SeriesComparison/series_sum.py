@@ -33,7 +33,7 @@ def sum_S3(N):
     return result
 
 def calculate_relative_errors(N_values):
-    """计算相对误差"""
+    #计算相对误差
     err1 = []
     err2 = []
     
@@ -48,7 +48,8 @@ def calculate_relative_errors(N_values):
     return err1, err2
 
 def plot_errors(N_values, err1, err2):
-    """绘制误差分析图"""
+    #绘制误差分析图
+    
     plt.figure(figsize=(10, 6))
     plt.loglog(N_values, err1, 'o-', label='S1 Error', alpha=0.7)
     plt.loglog(N_values, err2, 's--', label='S2 Error', alpha=0.7)
@@ -63,7 +64,7 @@ def plot_errors(N_values, err1, err2):
     plt.show()
 
 def print_results():
-    """打印典型N值的计算结果"""
+    # 打印典型N值的计算结果
     N_values = [10, 100, 1000, 10000]
     
     print("\n计算结果:")
@@ -79,7 +80,7 @@ def print_results():
         print(f"{N}\t{s1:.8f}\t{s2:.8f}\t{s3:.8f}\t{err1:.2e}\t{err2:.2e}")
 
 def main():
-    """主函数"""
+    #主函数
     # 生成N值序列
     N_values = np.logspace(0, 4, 50, dtype=int)
     
