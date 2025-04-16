@@ -11,7 +11,7 @@ def f(x):
         float: 函数计算结果
     """
     # 学生在此实现函数计算
-    return x＊(x-1)
+    return x*(x-1)
 
 def forward_diff(f, x, delta):
     """前向差分法计算导数
@@ -53,7 +53,7 @@ def analytical_derivative(x):
         float: 导数的精确值
     """
     # 学生在此实现解析导数公式
-    return 2＊x-1
+    return 2*x-1
 
 def calculate_errors(x_point=1.0):
     """计算不同步长下的误差
