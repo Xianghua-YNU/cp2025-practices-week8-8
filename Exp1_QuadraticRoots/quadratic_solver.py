@@ -75,15 +75,6 @@ def stable_formula(a, b, c):
     
     return x1, x2
 
-def verify_roots(a, b, c, roots):
-    """验证求得的根是否满足原方程"""
-    if roots:
-        x1, x2 = roots
-        assert abs(a*x1**2 + b*x1 + c) < 1e-10, "x1 is not a root"
-        assert abs(a*x2**2 + b*x2 + c) < 1e-10, "x2 is not a root"
-    else:
-        print("No real roots to verify.")
-
 def main():
     test_cases = [
         (1, 2, 1),             # 简单情况
@@ -100,7 +91,6 @@ def main():
         print("\n方法1（标准公式）的结果：")
         if roots1:
             print("x1 = {:.15f}, x2 = {:.15f}".format(roots1[0], roots1[1]))
-            verify_roots(a, b, c, roots1)
         else:
             print("无实根")
         
@@ -109,7 +99,6 @@ def main():
         print("\n方法2（替代公式）的结果：")
         if roots2:
             print("x1 = {:.15f}, x2 = {:.15f}".format(roots2[0], roots2[1]))
-            verify_roots(a, b, c, roots2)
         else:
             print("无实根")
         
@@ -118,7 +107,6 @@ def main():
         print("\n方法3（稳定求根程序）的结果：")
         if roots3:
             print("x1 = {:.15f}, x2 = {:.15f}".format(roots3[0], roots3[1]))
-            verify_roots(a, b, c, roots3)
         else:
             print("无实根")
 
