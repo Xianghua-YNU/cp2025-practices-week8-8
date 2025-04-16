@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def sum_S1(N):
     # 计算第一种形式的级数和：交错级数
     
-    S_N^(1) = sum_{n=1}^{2N} (-1)^n * n/(n+1)
+    # S_N^(1) = sum_{n=1}^{2N} (-1)^n * n/(n+1)
     
     result = 0.0
     for n in range(1, 2*N + 1):
@@ -14,7 +14,7 @@ def sum_S1(N):
 def sum_S2(N):
     # 计算第二种形式的级数和：两项求和相减
     
-    S_N^(2) = -sum_{n=1}^N (2n-1)/(2n) + sum_{n=1}^N (2n)/(2n+1)
+    # S_N^(2) = -sum_{n=1}^N (2n-1)/(2n) + sum_{n=1}^N (2n)/(2n+1)
     
     sum1 = sum2 = 0.0
     for n in range(1, N + 1):
@@ -25,7 +25,7 @@ def sum_S2(N):
 def sum_S3(N):
     # 计算第三种形式的级数和：直接求和
     
-    S_N^(3) = sum_{n=1}^N 1/(2n(2n+1))
+    # S_N^(3) = sum_{n=1}^N 1/(2n(2n+1))
     
     result = 0.0
     for n in range(1, N + 1):
