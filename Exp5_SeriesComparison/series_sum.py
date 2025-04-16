@@ -41,7 +41,6 @@ def calculate_relative_errors(N_values):
         s1 = sum_S1(N)
         s2 = sum_S2(N)
         s3 = sum_S3(N)
-        
         err1.append(abs((s1 - s3) / s3))
         err2.append(abs((s2 - s3) / s3))
     
