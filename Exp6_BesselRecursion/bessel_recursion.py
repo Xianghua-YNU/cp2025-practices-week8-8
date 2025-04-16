@@ -5,12 +5,9 @@ from scipy.special import spherical_jn
 def bessel_up(x, lmax):
     #向上递推计算球贝塞尔函数
     
-   # Args:
-        x: float, 自变量
-        lmax: int, 最大阶数
+   # Args: x: float, 自变量 lmax: int, 最大阶数
         
-   # Returns:
-        numpy.ndarray, 从0到lmax阶的球贝塞尔函数值
+   # Returns: numpy.ndarray, 从0到lmax阶的球贝塞尔函数值
     
     # 初始化结果数组
     j = np.zeros(lmax + 1)
@@ -29,13 +26,9 @@ def bessel_up(x, lmax):
 def bessel_down(x, lmax, m_start=None):
     #向下递推计算球贝塞尔函数
     
-    #Args:
-        x: float, 自变量
-        lmax: int, 最大阶数
-        m_start: int, 起始阶数，默认为lmax + 15
+    #Args: x: float, 自变量 lmax: int, 最大阶数 m_start: int, 起始阶数，默认为lmax + 15
         
-    #Returns:
-        numpy.ndarray, 从0到lmax阶的球贝塞尔函数值
+    #Returns: numpy.ndarray, 从0到lmax阶的球贝塞尔函数值
     
     if m_start is None:
         m_start = lmax + 15
@@ -63,9 +56,7 @@ def bessel_down(x, lmax, m_start=None):
 def plot_comparison(x, lmax):
     #绘制不同方法计算结果的比较图
     
-    #Args:
-        x: float, 自变量
-        lmax: int, 最大阶数
+    #Args: x: float, 自变量 lmax: int, 最大阶数
     
     l = np.arange(lmax + 1)
     
@@ -103,7 +94,7 @@ def plot_comparison(x, lmax):
     plt.close()
 
 def main():
-    """主函数"""
+    
     # 设置参数
     lmax = 25
     x_values = [0.1, 1.0, 10.0]
