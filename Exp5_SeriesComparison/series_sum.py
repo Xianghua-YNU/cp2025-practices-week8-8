@@ -34,9 +34,9 @@ def sum_S3(N):
 
 def calculate_relative_errors(N_values):
     #计算相对误差
+    
     err1 = []
     err2 = []
-    
     for N in N_values:
         s1 = sum_S1(N)
         s2 = sum_S2(N)
