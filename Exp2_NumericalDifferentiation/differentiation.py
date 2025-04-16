@@ -72,7 +72,7 @@ def calculate_errors(x_point=1.0):
     # 1. 使用np.logspace生成步长序列
     # 2. 对每个步长计算前向和中心差分
     # 3. 计算相对误差 = |近似值 - 精确值| / |精确值|
-    deltas = np.logspace(-14, -2, 13)
+    deltas = np.logspace(-2, -14, 7)
     true_value = analytical_derivative(x_point)
     forward_errors = []
     central_errors = []
